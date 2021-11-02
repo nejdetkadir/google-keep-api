@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :labels, except: [:edit]
   resources :notes, except: [:edit] do
     resources :todos, except: [:edit]
+    resources :collaborators, only: [:index, :create, :destroy]
   end
 end
