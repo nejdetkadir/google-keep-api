@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     defaults: { format: :json }
 
   root to: 'welcome#index'
+
+  resources :colors, except: [:edit]
 end
