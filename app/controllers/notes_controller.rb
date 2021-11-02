@@ -3,7 +3,14 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:update, :show, :destroy]
 
   def index
-    render json: current_user.notes
+    render json: Note.statuses.include?(params[:status].to_sym) ? current_user.notes.send(params[:status].to_sym) : current_user.notes,
+      include: [
+        :label,
+        :todos,
+        :images,
+        :collaborators,
+        :color
+      ]
   end
 
   def create

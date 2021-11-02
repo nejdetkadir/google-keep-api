@@ -8,5 +8,5 @@ class Note < ApplicationRecord
   has_many :todos, dependent: :destroy
 
   # enumerables
-  enum status: [:normal, :archived]
+  enum status: [:normal, :archived, :deleted]
 end

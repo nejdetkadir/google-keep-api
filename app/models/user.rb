@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :colors, dependent: :destroy
   has_many :labels, dependent: :destroy
   has_many :notes, dependent: :destroy
+  has_many :collaborators, dependent: :destroy
 
   def set_default_role
     self.role ||= :user

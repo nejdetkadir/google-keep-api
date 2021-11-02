@@ -4,11 +4,5 @@ class Label < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[user_id] }
-
-  def as_json(*args)
-    {
-      id: id,
-      name: name
-    }
-  end
+  has_many :notes, dependent: :nullify
 end
