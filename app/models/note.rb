@@ -7,10 +7,6 @@ class Note < ApplicationRecord
   has_many :collaborators, dependent: :destroy
   has_many :todos, dependent: :destroy
 
-  # validations
-  validates_presence_of :title, if: -> {content.empty?}
-  validates_presence_of :content, if: -> {title.empty?}
-
   # enumerables
   enum status: [:normal, :archived]
 end
