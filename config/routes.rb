@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :colors, except: [:edit]
   resources :labels, except: [:edit]
+  resources :notes, except: [:edit]
 end
