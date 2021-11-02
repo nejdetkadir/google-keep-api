@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: rails_api_boilerplate_development
+  database: google_keep_api_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: rails_api_boilerplate
+  #username: google_keep_api
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_api_boilerplate_test
+  database: google_keep_api_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: rails_api_boilerplate_production
-  username: rails_api_boilerplate
-  password: <%= ENV['RAILS_API_BOILERPLATE_DATABASE_PASSWORD'] %>
+  database: google_keep_api_production
+  username: google_keep_api
+  password: <%= ENV['GOOGLE_KEEP_API_DATABASE_PASSWORD'] %>

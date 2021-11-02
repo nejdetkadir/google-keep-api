@@ -1,19 +1,8 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cc0b1c55e4e443869e9473327b0abed3)](https://www.codacy.com/gh/nejdetkadir/rails-api-boilerplate/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nejdetkadir/rails-api-boilerplate&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f644447a7b3442479e485f1821c45ab8)](https://www.codacy.com/gh/nejdetkadir/google-keep-api/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nejdetkadir/google-keep-api&amp;utm_campaign=Badge_Grade)
 
-# Rails API Boilerplate
-A starter template for [Ruby on Rails API](https://guides.rubyonrails.org/api_app.html)
-
-# Features
-- Installed Gems
-  - [devise](https://github.com/heartcombo/devise) with [devise-jwt](https://github.com/waiting-for-dev/devise-jwt) authenticatable
-  - [faker](https://github.com/faker-ruby/faker)
-  - [searchkick](https://github.com/ankane/searchkick)
-  - [ruby-progressbar](https://github.com/jfelchner/ruby-progressbar)
-  - [carrierwave](https://github.com/carrierwaveuploader/carrierwave)
-  - [minimagick](https://github.com/minimagick/minimagick)
-  - [pundit](https://github.com/varvet/pundit)
-  - [rails-settings-cached](https://github.com/huacnlee/rails-settings-cached)
-  - [whenever](https://github.com/javan/whenever)
+# Google Keep API
+![logo](docs/logo.png)
+Google Keep API with Ruby on Rails
 
 # Installation
 ## Prerequisites
