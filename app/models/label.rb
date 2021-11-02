@@ -3,5 +3,12 @@ class Label < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates_presence_of :name
+  validates :name, presence: true, uniqueness: { scope: %i[user_id] }
+
+  def as_json(*args)
+    {
+      id: id,
+      name: name
+    }
+  end
 end
