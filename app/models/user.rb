@@ -10,6 +10,9 @@ class User < ApplicationRecord
   # enumerables
   enum role: [:user, :admin]
 
+  # associations
+  has_many :colors, dependent: :destroy
+
   def set_default_role
     self.role ||= :user
   end
