@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :notes, except: [:edit] do
     resources :todos, except: [:edit]
     resources :collaborators, only: [:index, :create, :destroy]
+    resources :images, only: [:index, :create, :destroy]
   end
 end
