@@ -16,6 +16,9 @@ class User < ApplicationRecord
   has_many :notes, dependent: :destroy
   has_many :collaborators, dependent: :destroy
 
+  # validations
+  validates_presence_of :fullname
+
   def as_json(options = {})
     super(options).merge({
       colors: colors,
