@@ -5,12 +5,4 @@ class Color < ApplicationRecord
 
   # validations
   validates :color, presence: true, uniqueness: { scope: %i[user_id] }
-  
-
-  def as_json(*args)
-    {
-      id: id,
-      color: color
-    }
-  end
 end

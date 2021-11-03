@@ -16,6 +16,14 @@ class User < ApplicationRecord
   has_many :notes, dependent: :destroy
   has_many :collaborators, dependent: :destroy
 
+  def as_json(options = {})
+    super(options).merge({
+      colors: colors,
+      labels: labels,
+      collaborators: collaborators
+    })
+  end
+
   def set_default_role
     self.role ||= :user
   end
