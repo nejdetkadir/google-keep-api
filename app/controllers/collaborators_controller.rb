@@ -8,9 +8,13 @@ class CollaboratorsController < ApplicationController
   end
 
   def create
-    @collaborator = @note.collaborators.new(collaborator_params)
+    if User.find_by(email: params[:collaborator][:email])
+      @collaborator = @note.collaborators.new(user_id: User.find_by(email: params[:collaborator][:email]).id)
 
-    render json: @collaborator.save ? @collaborator : handle_error_messages(@collaborator)
+      render json: @collaborator.save ? @collaborator : handle_error_messages(@collaborator)
+    else
+      render json: {errors: {user: ["not found"]}, messages: ["User not found"]}
+    end
   end
 
   def destroy
@@ -30,6 +34,6 @@ class CollaboratorsController < ApplicationController
   end
 
   def collaborator_params
-    params.require(:collaborator).permit(:user_id)
+    params.require(:collaborator).permit(:email)
   end
 end
